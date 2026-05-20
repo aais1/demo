@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StarCharge — The Energy Continuum</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;450;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles/tokens.css">
+<link rel="stylesheet" href="styles/nav.css">
+<link rel="stylesheet" href="styles/hero.css">
+<link rel="stylesheet" href="styles/sections.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</head>
+<body data-screen-label="StarCharge — Cinematic Site">
+
+<!-- ============ NAV ============ -->
+<nav class="nav" id="nav">
+  <a href="#" class="nav-logo">
+    <svg viewBox="0 0 24 24" fill="none">
+      <path d="M12 2 L14.5 9 L22 10 L16 15 L17.5 22 L12 18 L6.5 22 L8 15 L2 10 L9.5 9 Z" fill="#0a0a0a"/>
+      <circle cx="12" cy="12" r="2.2" fill="#F26522"/>
+    </svg>
+    StarCharge
+  </a>
+  <div class="nav-links">
+    <a class="nav-link has-sub" href="#ecosystem">Solutions</a>
+    <a class="nav-link" href="#taurus">Taurus 4G</a>
+    <a class="nav-link" href="#ebox">eBox 261</a>
+    <a class="nav-link has-sub" href="#">Network</a>
+    <a class="nav-link" href="#">Insights</a>
+  </div>
+  <a href="#cta" class="nav-cta"><span class="dot"></span>Reserve a demo</a>
+</nav>
+
+<!-- scroll progress on right side -->
+<div class="scroll-indicator" style="display:none;">
+  <div class="label">Scroll · the camera follows</div>
+  <div class="scroll-track"><div class="scroll-fill" id="scrollFill"></div></div>
+</div>
+
+<!-- ============ HERO — image-driven drone zoom ============ -->
+<section class="hero" style="padding: 0;" id="hero" data-screen-label="01 Hero">
+  <div class="hero-stick">
+
+    <!-- background image with onload drone zoom-out -->
+    <div class="hero-bg">
+      <img src="assets/hero-bg.webp" alt="" decoding="async" fetchpriority="high">
+    </div>
+    <div class="hero-veil"></div>
+    <div class="hero-vignette"></div>
+    <div class="grain"></div>
+
+    <!-- callout pills — fade/color-shift after drone zoom settles -->
+    <div class="hero-pills">
+      <div class="hero-pill p1">
+        <span class="pill-dot"></span>
+        <span class="pill-line"></span>
+        <span class="pill-label">DC Fast Charge · 480 kW</span>
+      </div>
+      <div class="hero-pill p2">
+        <span class="pill-dot"></span>
+        <span class="pill-line"></span>
+        <span class="pill-label">Solar Grid Interface</span>
+      </div>
+      <div class="hero-pill p3">
+        <span class="pill-dot"></span>
+        <span class="pill-line"></span>
+        <span class="pill-label">AI Load Balancer</span>
+      </div>
+    </div>
+
+    <!-- hero copy — slides in from top after the drone settles -->
+    <div class="hero-copy hero-default">
+      <h1 class="hero-title">
+        <!-- <span class="line-clip"><span class="line-inner l1">One <em>continuum</em></span></span> -->
+        <span class="line-clip"><span class="line-inner l2">Clean energy.</span></span>
+      </h1>
+      <div class="hero-right">
+        <p>From a single charge port to a planetary network solar, storage, swap, microgrid. Engineered as one cinematic system.</p>
+        <!-- <div class="hero-actions">
+          <a class="btn" href="#ecosystem">
+            Enter the ecosystem
+            <span class="arrow"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6 L10 6 M6 2 L10 6 L6 10" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </a>
+          <a class="btn btn-ghost" href="#taurus">Meet Taurus 4G</a>
+        </div> -->
+      </div>
+    </div>
+
+    <!-- DC Fast Charge state -->
+    <div class="hero-copy hero-state hero-dc">
+      <h1 class="hero-title">
+        <span class="line-clip"><span class="line-inner">480 kW of</span></span>
+        <span class="line-clip"><span class="line-inner">clean power.</span></span>
+      </h1>
+      <div class="hero-right">
+        <p>Liquid-cooled DC fast charging delivering highway-speed power — 10 to 80% in just 12 minutes. Bi-directional V2G ready.</p>
+      </div>
+    </div>
+
+    <!-- Solar Grid Interface state -->
+    <div class="hero-copy hero-state hero-solar">
+      <h1 class="hero-title">
+        <span class="line-clip"><span class="line-inner">Solar, meet</span></span>
+        <span class="line-clip"><span class="line-inner">the grid.</span></span>
+      </h1>
+      <div class="hero-right">
+        <p>Intelligent solar integration synchronising generation, storage and demand — maximising every photon across the network.</p>
+      </div>
+    </div>
+
+    <!-- AI Load Balancer state -->
+    <div class="hero-copy hero-state hero-ai">
+      <h1 class="hero-title">
+        <span class="line-clip"><span class="line-inner">Intelligence</span></span>
+        <span class="line-clip"><span class="line-inner">at the edge.</span></span>
+      </h1>
+      <div class="hero-right">
+        <p>Predictive AI orchestrates grid response in real time — self-optimising load balancing, zero-downtime, always one step ahead.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ BRANDS — Swiper infinite marquee ============ -->
+<section id="brands" style="padding:60px 0;border-top:1px solid #e8e6e2;border-bottom:1px solid #e8e6e2;background:#f8f7f5;overflow:hidden;">
+  <p style="text-align:center;font-size:10px;font-weight:600;letter-spacing:0.22em;color:#aaa8a4;text-transform:uppercase;margin:0 0 40px;font-family:'JetBrains Mono',monospace;">Trusted by global energy leaders</p>
+  <div style="position:relative;">
+    <div class="swiper" id="brandsSwiper">
+      <div class="swiper-wrapper" style="align-items:center;transition-timing-function:linear;">
+        <div class="swiper-slide" style="width:auto;"><img src="uploads/1778739447959.png" alt="" class="brand-img"/></div>
+        <div class="swiper-slide" style="width:auto;"><img src="uploads/1778739705565.png" alt="" class="brand-img"/></div>
+        <div class="swiper-slide" style="width:auto;"><img src="uploads/VestaSeriesnSolar-Storage-Inverter.png" alt="" class="brand-img"/></div>
+        <div class="swiper-slide" style="width:auto;"><img src="uploads/1778739447959.png" alt="" class="brand-img"/></div>
+        <div class="swiper-slide" style="width:auto;"><img src="uploads/1778739705565.png" alt="" class="brand-img"/></div>
+        <div class="swiper-slide" style="width:auto;"><img src="uploads/VestaSeriesnSolar-Storage-Inverter.png" alt="" class="brand-img"/></div>
+        <div class="swiper-slide" style="width:auto;"><img src="uploads/1778739447959.png" alt="" class="brand-img"/></div>
+        <div class="swiper-slide" style="width:auto;"><img src="uploads/1778739705565.png" alt="" class="brand-img"/></div>
+        <div class="swiper-slide" style="width:auto;"><img src="uploads/VestaSeriesnSolar-Storage-Inverter.png" alt="" class="brand-img"/></div>
+      </div>
+    </div>
+    <!-- edge fade -->
+    <div style="position:absolute;inset:0;background:linear-gradient(to right,#f8f7f5 0%,transparent 14%,transparent 86%,#f8f7f5 100%);pointer-events:none;z-index:2;"></div>
+  </div>
+</section>
+<style>
+  #brandsSwiper { overflow: hidden; }
+  .brand-img { width:140px; height:70px; object-fit:contain; filter:grayscale(1) brightness(0.7) opacity(0.55); display:block; margin: 0 48px; }
+</style>
+
+<!-- ============ CHAPTER 02 — Ecosystem ============ -->
+<section class="eco-section" id="ecosystem" data-screen-label="02 Ecosystem">
+
+
+  <div class="eco-grid">
+
+    <!-- ============ FEATURE — scroll reveal ============ -->
+    <div id="feature" style="grid-column:1/-1;width:100%;height:100vh;margin:0;padding:0;position:relative;overflow:hidden;display:flex;align-items:center;">
+
+      <style>
+        /* grid: narrow heading left | full-width text right — no image flow */
+        #feature-inner {
+          display: grid;
+          grid-template-columns: 260px 1fr;
+          gap: 64px;
+          align-items: start;
+          width: 100%;
+          padding: 0 24px;
+          box-sizing: border-box;
+        }
+        @media (max-width: 860px) {
+          #feature-inner { grid-template-columns: 1fr; padding: 0 24px; }
+          .fi-wrap       { display: none !important; }
+        }
+
+        /* LEFT — large heading */
+        .fi-eyebrow {
+          font-size: 10px;
+          font-weight: 600;
+          letter-spacing: 0.24em;
+          text-transform: uppercase;
+          color: #F26522;
+          font-family: 'JetBrains Mono', monospace;
+        }
+        #featureHeading {
+          font-size: clamp(22px, 2.4vw, 34px);
+          font-weight: 700;
+          line-height: 0.92;
+          margin: 18px 0 0;
+          color: #1a1816;
+          font-family: 'Onest', sans-serif;
+          letter-spacing: -0.02em;
+        }
+
+        /* RIGHT — text only, full column width, no padding needed */
+        #featureRight { position: relative; }
+        #featureBody {
+          font-size: clamp(26px, 2.8vw, 38px);
+          line-height: 1.62;
+          font-weight: 500;
+          font-family: 'Onest', sans-serif;
+          margin: 0;
+          width: 80%;
+          margin: auto;
+        }
+        .fw { display: inline; color: #b8b5b0; }
+
+        /* ── Floating images ─────────────────────────────────────────────
+           Wrappers: absolute position only — no CSS transform animation
+           (CSS anim on a parent breaks GSAP ScrollTrigger measurement).
+           GSAP handles both the scroll-rise (on img) and the idle bob
+           (on wrapper) so the two transforms never share an element.    */
+        .fi-wrap {
+          position: absolute;
+          z-index: 2;
+          pointer-events: auto;
+          will-change: transform;
+        }
+        .fi-tooltip {
+          position: absolute;
+          bottom: calc(100% + 10px);
+          left: 50%;
+          transform: translateX(-50%) translateY(6px);
+          background: #0a0a0a;
+          color: #f5f5f3;
+          font-size: 10px;
+          font-weight: 600;
+          letter-spacing: 0.14em;
+          text-transform: uppercase;
+          font-family: 'JetBrains Mono', monospace;
+          padding: 6px 12px;
+          border-radius: 8px;
+          white-space: nowrap;
+          opacity: 0;
+          pointer-events: none;
+          transition: opacity 0.22s ease, transform 0.22s ease;
+          box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+          z-index: 10;
+        }
+        .fi-tooltip::after {
+          content: '';
+          position: absolute;
+          top: 100%; left: 50%;
+          transform: translateX(-50%);
+          border: 5px solid transparent;
+          border-top-color: #0a0a0a;
+        }
+        .fi-wrap:hover .fi-tooltip {
+          opacity: 1;
+          transform: translateX(-50%) translateY(0);
+        }
+        .fi-wrap:hover .fi {
+          filter: drop-shadow(0 22px 44px rgba(0,0,0,0.30));
+        }
+        #fi1-wrap { top: -10px;   left: 0;   }
+        #fi2-wrap { top:  20px;   right: 0;  }
+        #fi3-wrap { bottom: 90px; left: 38%; }
+        /* right-edge image — anchor tooltip to the right so it doesn't overflow */
+        #fi2-wrap .fi-tooltip {
+          left: auto;
+          right: 0;
+          transform: translateY(6px);
+        }
+        #fi2-wrap:hover .fi-tooltip {
+          transform: translateY(0);
+        }
+        .fi {
+          object-fit: contain;
+          will-change: transform;
+          opacity: 1;
+          display: block;
+          filter: drop-shadow(0 14px 24px rgba(0,0,0,0.16));
+          border-radius: 999px;
+          background: #ffffff;
+          border: 1px solid #000000;
+          padding: 0;
+          transition: filter 0.3s ease;
+        }
+        #fi1 { width: 75px; }
+        #fi2 { width: 100px; }
+        #fi3 { width: 70px; }
+      </style>
+
+      <!-- ── Text grid ── -->
+      <div id="feature-inner">
+
+        <div id="featureLeft">
+          <div class="fi-eyebrow">— About StarCharge</div>
+          <h2 id="featureHeading">The<br>Energy<br>Continuum.</h2>
+
+          <!-- Left stats -->
+          <div style="margin-top:40px;display:flex;flex-direction:column;gap:28px;">
+            <div>
+              <div style="font-size:clamp(28px,3vw,42px);font-weight:700;font-family:'Onest',sans-serif;color:#1a1816;letter-spacing:-0.02em;line-height:1;">$14T</div>
+              <div style="font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#aaa8a4;margin-top:6px;font-family:'JetBrains Mono',monospace;">Market opportunity</div>
+            </div>
+            <div>
+              <div style="font-size:clamp(28px,3vw,42px);font-weight:700;font-family:'Onest',sans-serif;color:#1a1816;letter-spacing:-0.02em;line-height:1;">500+</div>
+              <div style="font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#aaa8a4;margin-top:6px;font-family:'JetBrains Mono',monospace;">Networks deployed</div>
+            </div>
+            <div>
+              <div style="font-size:clamp(28px,3vw,42px);font-weight:700;font-family:'Onest',sans-serif;color:#1a1816;letter-spacing:-0.02em;line-height:1;">99.9%</div>
+              <div style="font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#aaa8a4;margin-top:6px;font-family:'JetBrains Mono',monospace;">Uptime SLA</div>
+            </div>
+          </div>
+        </div>
+
+        <div id="featureRight">
+          <p id="featureBody">While every energy system became digitally connected, $14 trillion in physical charging infrastructure still runs on manual processes. StarCharge transforms charging networks into autonomous energy entities — sites that self-optimise, predict their own failures, and coordinate grid responses with minimal human intervention.</p>
+
+          <!-- Capability tags -->
+          <div style="display:flex;flex-wrap:wrap;gap:10px;width: 80%; margin: 36px auto 0;">
+            <span style="font-size:11px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;font-family:'JetBrains Mono',monospace;color:#6b6b67;border:1px solid #d8d6d2;border-radius:100px;padding:8px 18px;">Self-Optimising</span>
+            <span style="font-size:11px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;font-family:'JetBrains Mono',monospace;color:#6b6b67;border:1px solid #d8d6d2;border-radius:100px;padding:8px 18px;">Predictive AI</span>
+            <span style="font-size:11px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;font-family:'JetBrains Mono',monospace;color:#6b6b67;border:1px solid #d8d6d2;border-radius:100px;padding:8px 18px;">Grid-Responsive</span>
+            <span style="font-size:11px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;font-family:'JetBrains Mono',monospace;color:#6b6b67;border:1px solid #d8d6d2;border-radius:100px;padding:8px 18px;">Zero-Downtime</span>
+          </div>
+
+          <!-- CTA link -->
+          <div style="padding-top:36px;border-top:1px solid #e8e6e2;margin: 40px auto 0;width: 80%;;">
+            <a href="#ecosystem" style="display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;font-family:'JetBrains Mono',monospace;color:#0a0a0a;text-decoration:none;">
+              Explore the ecosystem
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="#F26522" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+
+          <!-- Floating images — positioned relative to this text block -->
+          <div class="fi-wrap float-wrap" id="fi1-wrap">
+            <div class="fi-tooltip">EV Charger</div>
+            <img id="fi1" class="fi float-img" src="uploads/1778739447959.png" alt="" draggable="false" />
+          </div>
+          <div class="fi-wrap float-wrap" id="fi2-wrap">
+            <div class="fi-tooltip">Vesta Solar Inverter</div>
+            <img id="fi2" class="fi float-img" src="uploads/VestaSeriesnSolar-Storage-Inverter.png" alt="" draggable="false" />
+          </div>
+          <div class="fi-wrap float-wrap" id="fi3-wrap">
+            <div class="fi-tooltip">Storage Unit</div>
+            <img id="fi3" class="fi float-img" src="uploads/1778739705565.png" alt="" draggable="false" />
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- ============ ORBIT — three orbiting dots ============ -->
+    <div id="scOrbSection" style="grid-column:1/-1;display:flex;align-items:center;justify-content:center;padding:100px 0 200px;position:relative;overflow:hidden;">
+      <style>
+        .sc-orb-wrap { position:relative; width:540px; height:540px; flex-shrink:0; }
+        .sc-orb-ring {
+          position:absolute; inset:0; border-radius:50%;
+          border:1px solid rgba(26,24,22,0.10);
+        }
+        .sc-orb-ring-sm {
+          position:absolute; top:22%; left:22%; right:22%; bottom:22%;
+          border-radius:50%; border:1px solid rgba(26,24,22,0.06);
+        }
+        .sc-orb-center {
+          position:absolute; inset:0;
+          display:flex; flex-direction:column; align-items:center; justify-content:center;
+          text-align:center; gap:8px;
+        }
+        .sc-orb-eyebrow {
+          font-size:10px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase;
+          font-family:'JetBrains Mono',monospace; color:#F26522;
+        }
+        .sc-orb-title {
+          font-size:clamp(22px,2.8vw,34px); font-weight:700; font-family:'Onest',sans-serif;
+          color:#1a1816; line-height:1.15; letter-spacing:-0.02em;
+        }
+        .sc-orb-sub {
+          font-size:11px; font-family:'JetBrains Mono',monospace;
+          color:#aaa8a4; letter-spacing:0.08em; margin-top:2px;
+        }
+
+        /* Each orbiting image: centered at origin, then rotate+translate onto ring,
+           then counter-rotate the inner card so it stays upright */
+        .sc-img-node {
+          position:absolute; top:50%; left:50%; transform-origin:0 0;
+        }
+        .sc-img-card {
+          /* offset to center the card on the ring point */
+          transform: translateX(-50%) translateY(-50%);
+          display:flex; flex-direction:column; align-items:center; gap:6px;
+        }
+        .sc-img-card img {
+          width:56px; height:56px; object-fit:contain;
+          background:#fff; border-radius:12px; padding:6px;
+          border:1px solid #e8e6e2;
+          box-shadow:0 4px 16px rgba(0,0,0,0.10);
+          display:block;
+        }
+        .sc-img-card span {
+          font-size:9px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase;
+          font-family:'JetBrains Mono',monospace; color:#6b6b67; white-space:nowrap;
+        }
+
+        /* orbit + counter-rotate so card stays upright */
+        @keyframes sc-img-1 {
+          from { transform:rotate(38deg)  translateX(268px) rotate(-38deg);  }
+          to   { transform:rotate(398deg) translateX(268px) rotate(-398deg); }
+        }
+        @keyframes sc-img-2 {
+          from { transform:rotate(148deg) translateX(268px) rotate(-148deg); }
+          to   { transform:rotate(508deg) translateX(268px) rotate(-508deg); }
+        }
+        @keyframes sc-img-3 {
+          from { transform:rotate(272deg) translateX(268px) rotate(-272deg); }
+          to   { transform:rotate(632deg) translateX(268px) rotate(-632deg); }
+        }
+
+        .sc-img-node-1 { animation:sc-img-1 13s linear infinite; }
+        .sc-img-node-2 { animation:sc-img-2 20s linear infinite; }
+        .sc-img-node-3 { animation:sc-img-3 10s linear infinite; }
+
+      </style>
+
+      <div class="sc-orb-wrap">
+        <div class="sc-orb-ring"></div>
+        <div class="sc-orb-ring-sm"></div>
+        <div class="sc-orb-center">
+          <div class="sc-orb-eyebrow">— StarCharge OS</div>
+          <div class="sc-orb-title">Grid<br>Intelligence</div>
+          <div class="sc-orb-sub">3 live modules</div>
+        </div>
+
+        <div class="sc-img-node sc-img-node-1">
+          <div class="sc-img-card">
+            <img src="uploads/VestaSeriesnSolar-Storage-Inverter.png" alt="Solar Inverter"/>
+            <span>Solar Inverter</span>
+          </div>
+        </div>
+
+        <div class="sc-img-node sc-img-node-2">
+          <div class="sc-img-card">
+            <img src="uploads/1778739447959.png" alt="EV Charger"/>
+            <span>EV Charger</span>
+          </div>
+        </div>
+
+        <div class="sc-img-node sc-img-node-3">
+          <div class="sc-img-card">
+            <img src="uploads/1778739705565.png" alt="Storage Unit"/>
+            <span>Storage</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <!-- Microgrid (full width) -->
+   
+
+  </div>
+</section>
+
+<!-- ============ CHAPTER 03 — Taurus 4G ============ -->
+<!-- ============ SOLUTIONS SHOWCASE ============ -->
+<section class="showcase-section" id="solutions" data-screen-label="03 Solutions">
+  <div class="showcase-head">
+    <div class="showcase-eyebrow">Solutions</div>
+    <h2>Every application.<br><em>One platform.</em></h2>
+  </div>
+
+  <div class="showcase-grid">
+
+    <!-- AC Charging -->
+    <div class="showcase-card">
+      <img src="uploads/AC.jpg" alt="AC Charging" />
+      <div class="showcase-tag">Level 2 · AC</div>
+      <div class="showcase-overlay">
+        <span class="showcase-num">— 01</span>
+        <div class="showcase-body">
+          <div class="showcase-title">AC Charging</div>
+          <div class="showcase-desc">Smart Level 2 solutions for residential driveways, parking structures, and commercial fleets — with demand-response integration.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DC Fast Charge + V2G -->
+    <div class="showcase-card">
+      <img src="uploads/dc_v2g.jpg" alt="DC Fast Charge & V2G" />
+      <div class="showcase-tag">Up to 480 kW</div>
+      <div class="showcase-overlay">
+        <span class="showcase-num">— 02</span>
+        <div class="showcase-body">
+          <div class="showcase-title">DC Fast Charge &amp; V2G</div>
+          <div class="showcase-desc">Ultra-fast DC stations with bi-directional vehicle-to-grid capability — turning parked EVs into dispatchable grid assets.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ESS Residential & C&I -->
+    <div class="showcase-card">
+      <img src="uploads/ess-res-ci-pcs.jpg" alt="ESS Residential & C&I" />
+      <div class="showcase-tag">Behind-the-meter</div>
+      <div class="showcase-overlay">
+        <span class="showcase-num">— 03</span>
+        <div class="showcase-body">
+          <div class="showcase-title">ESS Residential &amp; C&amp;I</div>
+          <div class="showcase-desc">Behind-the-meter battery storage for homes, microgrids, and commercial facilities — pairing solar generation with intelligent dispatch.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ESS Utility Scale -->
+    <div class="showcase-card">
+      <img src="uploads/ESS.jpg" alt="ESS Utility Scale" />
+      <div class="showcase-tag">Grid-scale</div>
+      <div class="showcase-overlay">
+        <span class="showcase-num">— 04</span>
+        <div class="showcase-body">
+          <div class="showcase-title">ESS Utility Scale</div>
+          <div class="showcase-desc">Containerised grid-scale energy storage systems engineered for frequency regulation, peak shaving, and long-duration backup.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="product-section" id="taurus" data-screen-label="04 Taurus 4G">
+  <div class="chapter-label">— 03 / 05 · Product Film</div>
+  <div class="product-stage">
+    <div class="stage-bg"></div>
+    <div class="stage-floor"></div>
+
+    <div class="product-visual" id="taurusVisual">
+      <!-- taurus SVG injected here -->
+    </div>
+
+    <div class="product-meta">
+      <span class="codename">SC · T4G — 480 kW DCFC</span>
+      <h2 class="display reveal fill-reveal-dark">
+        Taurus, <em>fourth generation.</em>
+      </h2>
+      <p class="reveal">A single liquid-cooled column delivering 480 kW of clean DC. Built for the next decade of highway charging — quieter, smaller, more efficient than anything before it.</p>
+
+      <div class="product-controls" id="taurusControls">
+        <button class="pill active" data-state="assembled">Assembled</button>
+        <button class="pill" data-state="exploded">Exploded view</button>
+      </div>
+
+      <div class="product-specs">
+        <div class="row"><span class="k">Peak power</span><span class="v">480<small>kW</small></span></div>
+        <div class="row"><span class="k">Charge time · 10→80%</span><span class="v">12<small>min</small></span></div>
+        <div class="row"><span class="k">Voltage range</span><span class="v">200–1000<small>V</small></span></div>
+        <div class="row"><span class="k">Efficiency</span><span class="v">98<small>%</small></span></div>
+        <div class="row"><span class="k">Footprint</span><span class="v">0.32<small>m²</small></span></div>
+        <div class="row"><span class="k">Acoustic</span><span class="v">52<small>dB @1m</small></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHAPTER 04 — eBox 261 ============ -->
+<section class="product-section" id="ebox" data-screen-label="05 eBox 261" style="background: #0d0d0c;">
+  <div class="chapter-label">— 04 / 05 · Product Film</div>
+  <div class="product-stage" style="grid-template-columns: 520px 1fr;">
+    <div class="stage-bg"></div>
+    <div class="stage-floor"></div>
+
+    <div class="product-meta" style="order: 1;">
+      <span class="codename">SC · eBox 261 — UTILITY-SCALE ESS</span>
+      <h2 class="display reveal fill-reveal-dark">
+        eBox <em>261.</em>
+      </h2>
+      <p class="reveal">2.61 megawatt-hours of LFP storage in a single liquid-cooled enclosure. Black-start ready, cell-level monitored, designed for 20 years of grid service.</p>
+
+      <div class="product-controls" id="eboxControls">
+        <button class="pill active" data-state="assembled">Assembled</button>
+        <button class="pill" data-state="exploded">Cell array</button>
+      </div>
+
+      <div class="product-specs">
+        <div class="row"><span class="k">Capacity</span><span class="v">2.61<small>MWh</small></span></div>
+        <div class="row"><span class="k">Chemistry</span><span class="v">LFP</span></div>
+        <div class="row"><span class="k">Round-trip</span><span class="v">94.5<small>%</small></span></div>
+        <div class="row"><span class="k">Cycle life</span><span class="v">12,000</span></div>
+        <div class="row"><span class="k">Cooling</span><span class="v">Liquid</span></div>
+        <div class="row"><span class="k">Operating temp</span><span class="v">−30 → 55<small>°C</small></span></div>
+      </div>
+    </div>
+
+    <div class="product-visual" id="eboxVisual" style="order: 2;">
+      <!-- ebox SVG injected here -->
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHAPTER 05 — Numbers ============ -->
+<section class="section-dark" id="scale" data-screen-label="05 At scale">
+  <div class="section-head">
+    <div class="index">
+      <span class="num">— 05 / 05</span>
+      <span class="label">At Scale</span>
+    </div>
+    <h2 class="fill-reveal-dark reveal">The network, <em>by the numbers.</em></h2>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><span class="v">340<small>k+</small></span><span class="k">Chargers deployed</span></div>
+    <div class="stat"><span class="v">87<small> countries</small></span><span class="k">Operating regions</span></div>
+    <div class="stat"><span class="v">14.2<small>TWh</small></span><span class="k">Clean energy dispatched</span></div>
+    <div class="stat"><span class="v">99.97<small>%</small></span><span class="k">Network uptime</span></div>
+  </div>
+
+  <div style="margin-top: 88px;">
+    <div class="cta-block" id="cta">
+      <div class="ambient"></div>
+      <h2 class="display reveal fill-reveal-dark">
+        Build the energy<br>continuum <em>with us.</em>
+      </h2>
+      <div class="cta-row">
+        <a class="btn btn-light" href="#">
+          Reserve a demo
+          <span class="arrow"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6 L10 6 M6 2 L10 6 L6 10" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="btn" style="background: transparent; border: 1px solid #ffffff22; color: #f5f5f3;" href="#">Talk to engineering</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer data-screen-label="Footer">
+  <div class="top">
+    <div class="brand-blurb">
+      <h4>StarCharge</h4>
+      <p>Engineering the world's clean-energy continuum. From cell, to charger, to grid.</p>
+    </div>
+    <div class="col">
+      <h5>Products</h5>
+      <a href="#">Taurus 4G</a>
+      <a href="#">Apollo</a>
+      <a href="#">eBox 261</a>
+      <a href="#">Titan ESS</a>
+    </div>
+    <div class="col">
+      <h5>Solutions</h5>
+      <a href="#">Highway corridors</a>
+      <a href="#">Fleet depots</a>
+      <a href="#">Utility</a>
+      <a href="#">Microgrid</a>
+    </div>
+    <div class="col">
+      <h5>Company</h5>
+      <a href="#">About</a>
+      <a href="#">Newsroom</a>
+      <a href="#">Sustainability</a>
+      <a href="#">Careers</a>
+    </div>
+    <div class="col">
+      <h5>Connect</h5>
+      <a href="#">Sales</a>
+      <a href="#">Partners</a>
+      <a href="#">Support</a>
+      <a href="#">Investors</a>
+    </div>
+  </div>
+  <div class="bottom">
+    <span>© 2026 STARCHARGE · ALL RIGHTS RESERVED</span>
+    <span>· FRAME 5840 / END ·</span>
+  </div>
+</footer>
+
+<script src="scripts/scroll.js"></script>
+
+<!-- GSAP + ScrollTrigger -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.0/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script>
+/* ---------------- BRANDS SWIPER ---------------- */
+new Swiper('#brandsSwiper', {
+  slidesPerView: 'auto',
+  loop: true,
+  speed: 4000,
+  allowTouchMove: false,
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: false,
+  },
+  freeMode: {
+    enabled: true,
+    momentum: false,
+  },
+});
+
+gsap.registerPlugin(ScrollTrigger)
+
+/* ---------------- LENIS ---------------- */
+
+const lenis = new Lenis({
+  lerp: 0.08,
+  smoothWheel: true,
+  wheelMultiplier: 0.9,
+  smoothTouch: false,
+  normalizeWheel: true,
+})
+
+lenis.on("scroll", ScrollTrigger.update)
+
+gsap.ticker.add((time) => {
+  lenis.raf(time * 1000)
+})
+
+gsap.ticker.lagSmoothing(0)
+
+/* ---------------- SCROLLTRIGGER ---------------- */
+
+ScrollTrigger.config({
+  ignoreMobileResize: true,
+})
+
+/* ---------------- WORD REVEAL ---------------- */
+
+const para = document.getElementById("featureBody")
+
+if (para) {
+  para.innerHTML = para.textContent
+    .trim()
+    .split(/\s+/)
+    .map(word => `<span class="fw">${word}</span>`)
+    .join(" ")
+
+  const spans = para.querySelectorAll(".fw")
+
+  gsap.set(spans, {
+    color: "#b0aca6",
+  })
+
+  gsap.to(spans, {
+    color: "#0a0a0a",
+    stagger: 0.08,
+    ease: "none",
+    scrollTrigger: {
+      trigger: "#feature",
+      start: "top 90%",
+      end: "bottom 110%",
+      scrub: 1,
+    },
+  })
+}
+
+/* ---------------- FLOATING IMAGES — 3-phase scrub ----------------
+   Phase 1 (0–25%):  rise in from below screen
+   Phase 2 (25–30%): brief slow hover
+   Phase 3 (30–100%): shoot upward fast, fade out
+   scrub makes the whole thing reverse on scroll-up              */
+
+['#fi1-wrap', '#fi2-wrap', '#fi3-wrap'].forEach((wrap, i) => {
+  gsap.set(wrap, { y: 420, opacity: 0 });
+
+  const riseY = i < 2 ? -448 : -560;
+
+  gsap.timeline({
+    scrollTrigger: {
+      trigger: '#feature',
+      start: 'top 25%%',
+      end: 'bottom top',
+      scrub: 1.2,
+    }
+  })
+  .to(wrap, { y: 0,     opacity: 1, ease: 'power3.out', duration: 0.25 }, i * 0.04)
+  .to(wrap, { y: -22,   opacity: 1, ease: 'none',       duration: 0.05 })
+  .to(wrap, { y: riseY, opacity: 0, ease: 'power2.in',  duration: 0.70 });
+});
+
+/* ---------------- ORBIT GLASS CURTAIN ---------------- */
+// orbit section: starts blurred/faded, clears as it scrolls into view
+gsap.fromTo('.sc-orb-wrap',
+  { filter: 'blur(18px)', opacity: 0.35 },
+  {
+    filter: 'blur(0px)', opacity: 1,
+    ease: 'power2.out',
+    scrollTrigger: {
+      trigger: '#scOrbSection',
+      start: 'top 70%',
+      end: 'center 40%',
+      scrub: 1.4,
+    }
+  }
+);
+
+/* ---------------- REVEALS ---------------- */
+
+gsap.utils.toArray(".reveal").forEach((el) => {
+  gsap.fromTo(
+    el,
+    {
+      opacity: 0,
+      y: 50,
+    },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 1.4,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: el,
+        start: "top 85%",
+      },
+    }
+  )
+})
+
+/* ============================================================
+   HERO SCROLL SEQUENCE
+   Pins the hero-stick (CSS sticky handles it) for 500vh.
+   ScrollTrigger drives bg-image zoom into each feature point
+   and crossfades the copy text for DC / Solar / AI.
+   ============================================================ */
+;(function () {
+  const heroBgImg   = document.querySelector('.hero-bg img')
+  const heroPills   = document.querySelector('.hero-pills')
+  const defaultCopy = document.querySelector('.hero-copy.hero-default')
+  const dcCopy      = document.querySelector('.hero-copy.hero-dc')
+  const solarCopy   = document.querySelector('.hero-copy.hero-solar')
+  const aiCopy      = document.querySelector('.hero-copy.hero-ai')
+
+  if (!heroBgImg || !defaultCopy) return
+
+  // Set initial state for scroll-state copies
+  gsap.set([dcCopy, solarCopy, aiCopy], { opacity: 0, y: 28 })
+
+  // Zoom target maths
+  // transform-origin on heroBgImg is 50% 55%.
+  // After scale(S) from that origin, point (px,py) lands at:
+  //   screen_x = (0.5 + (px-0.5)*S) * vw  +  tx
+  //   screen_y = (0.55 + (py-0.55)*S) * vh +  ty
+  // We want it centred → screen_x=0.5vw, screen_y=0.5vh:
+  //   tx = vw*(0.5 - px)*S
+  //   ty = vh*(-0.05 + (0.55-py)*S)
+  const S = 1.875
+
+  function targets() {
+    const vw = window.innerWidth, vh = window.innerHeight
+    function t(px, py) {
+      // .hero-bg has inset:-2%, so the image is 104% wide/tall.
+      // Minimum scale to keep image covering the viewport after translation:
+      //   right edge: S >= 0.50 / (1.02 - px)
+      //   left  edge: S >= 0.50 / (px  + 0.02)
+      const cover = Math.max(0.5 / (1.02 - px), 0.5 / (px + 0.02)) + 0.1
+      const s = Math.max(S, cover)
+      return {
+        scale: s,
+        x: vw * (0.5 - px) * s,
+        y: vh * (-0.05 + (0.55 - py) * s),
+      }
+    }
+    return {
+      dc:    t(0.44, 0.44),   // pill p1: top:44% left:44%
+      solar: t(0.76, 0.27),   // pill p2: top:27% right:24% → left:76%
+      ai:    t(0.82, 0.55),   // pill p3: top:55% right:18% → left:82%
+    }
+  }
+
+  // Kill CSS animations on bg-img and pills once scroll begins
+  let cssKilled = false
+  function killCSS() {
+    if (cssKilled) return
+    cssKilled = true
+    heroBgImg.style.animation = 'none'
+    heroPills.style.animation = 'none'
+    gsap.set(heroBgImg, { scale: 1, x: 0, y: 0, transformOrigin: '50% 55%' })
+    gsap.set(heroPills, { scale: 1, x: 0, y: 0 })
+  }
+
+  const T = targets()
+
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: '#hero',
+      start: 'top top',
+      end: 'bottom bottom',
+      scrub: 1.5,
+      onUpdate: self => { if (self.progress > 0.005) killCSS() },
+    }
+  })
+
+  tl
+    // ── Fade out default copy + pills ──────────────────────────
+    .to(defaultCopy, { opacity: 0, y: -30, duration: 0.07, ease: 'power2.in' },  0.03)
+    .to(heroPills,   { opacity: 0,         duration: 0.05, ease: 'power2.in' },  0.03)
+
+    // ── DC Fast Charge zoom-in ──────────────────────────────────
+    .to(heroBgImg,   { scale: T.dc.scale, x: T.dc.x, y: T.dc.y,
+                       transformOrigin: '50% 55%',
+                       duration: 0.14, ease: 'power3.inOut' },                   0.10)
+    .to(dcCopy,      { opacity: 1, y: 0,  duration: 0.08, ease: 'power2.out' }, 0.22)
+
+    // ── DC hold (0.30 – 0.38) then zoom-out ────────────────────
+    .to(dcCopy,      { opacity: 0, y: -22, duration: 0.06, ease: 'power2.in' }, 0.38)
+    .to(heroBgImg,   { scale: 1, x: 0, y: 0,
+                       duration: 0.09, ease: 'power3.inOut' },                   0.41)
+
+    // ── Solar Grid Interface zoom-in ────────────────────────────
+    .to(heroBgImg,   { scale: T.solar.scale, x: T.solar.x, y: T.solar.y,
+                       duration: 0.12, ease: 'power3.inOut' },                   0.52)
+    .to(solarCopy,   { opacity: 1, y: 0,  duration: 0.08, ease: 'power2.out' }, 0.62)
+
+    // ── Solar hold then zoom-out ────────────────────────────────
+    .to(solarCopy,   { opacity: 0, y: -22, duration: 0.06, ease: 'power2.in' }, 0.72)
+    .to(heroBgImg,   { scale: 1, x: 0, y: 0,
+                       duration: 0.08, ease: 'power3.inOut' },                   0.75)
+
+    // ── AI Load Balancer zoom-in ────────────────────────────────
+    .to(heroBgImg,   { scale: T.ai.scale, x: T.ai.x, y: T.ai.y,
+                       duration: 0.10, ease: 'power3.inOut' },                   0.84)
+    .to(aiCopy,      { opacity: 1, y: 0,  duration: 0.07, ease: 'power2.out' }, 0.91)
+
+    // ── Final zoom-out — releases scroll ───────────────────────
+    .to(heroBgImg,   { scale: 1, x: 0, y: 0,
+                       duration: 0.05, ease: 'power3.inOut' },                   0.96)
+})()
+</script>
+</body>
+</html>

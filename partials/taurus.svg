@@ -1,0 +1,164 @@
+
+<svg class="taurus-svg" viewBox="0 0 360 720" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="t-body" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3a3835"></stop>
+      <stop offset="0.3" stop-color="#26241f"></stop>
+      <stop offset="0.55" stop-color="#161412"></stop>
+      <stop offset="0.85" stop-color="#26241f"></stop>
+      <stop offset="1" stop-color="#0a0908"></stop>
+    </linearGradient>
+    <linearGradient id="t-side" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#1a1816"></stop>
+      <stop offset="0.5" stop-color="#0a0908"></stop>
+      <stop offset="1" stop-color="#1a1816"></stop>
+    </linearGradient>
+    <linearGradient id="t-base" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a1816"></stop>
+      <stop offset="1" stop-color="#050505"></stop>
+    </linearGradient>
+    <linearGradient id="t-screen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0a0908"></stop>
+      <stop offset="1" stop-color="#1a1816"></stop>
+    </linearGradient>
+    <radialGradient id="t-port" cx="0.5" cy="0.5" r="0.55">
+      <stop offset="0" stop-color="#F26522"></stop>
+      <stop offset="0.5" stop-color="#c44e15"></stop>
+      <stop offset="1" stop-color="#0a0908"></stop>
+    </radialGradient>
+    <radialGradient id="t-port-glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#F26522" stop-opacity="0.6"></stop>
+      <stop offset="1" stop-color="#F26522" stop-opacity="0"></stop>
+    </radialGradient>
+    <linearGradient id="t-highlight" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0"></stop>
+      <stop offset="0.45" stop-color="#ffffff" stop-opacity="0.18"></stop>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.32"></stop>
+      <stop offset="0.55" stop-color="#ffffff" stop-opacity="0.18"></stop>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"></stop>
+    </linearGradient>
+  </defs>
+
+  
+  <ellipse cx="180" cy="700" rx="120" ry="10" fill="#000000" opacity="0.55"></ellipse>
+  <ellipse cx="180" cy="702" rx="80" ry="6" fill="#000000" opacity="0.7"></ellipse>
+
+  
+  <g class="t-part" data-part="base" style="transform: translate(0px, var(--ex-base, 0px));">
+    <path d="M70 700 L290 700 L274 660 L86 660 Z" fill="url(#t-base)"></path>
+    <path d="M70 700 L86 660 L86 668 L70 706 Z" fill="#1a1816" opacity="0.6"></path>
+    <line x1="92" y1="672" x2="268" y2="672" stroke="#3a3835" stroke-width="0.5"></line>
+    <text x="100" y="688" font-family="JetBrains Mono" font-size="6" fill="#6b6b67" letter-spacing="1">SC-T4G · 480 kW</text>
+  </g>
+
+  
+  <g class="t-part" data-part="column" style="transform: translate(0px, var(--ex-column, 0px));">
+    
+    <path d="M86 660 L274 660 L260 200 L100 200 Z" fill="url(#t-body)"></path>
+    
+    <path d="M86 660 L274 660 L260 200 L100 200 Z" fill="url(#t-highlight)" opacity="0.7"></path>
+    
+    <path d="M100 200 L102 660 L86 660 L100 200 Z" fill="#000000" opacity="0.4"></path>
+    <path d="M260 200 L258 660 L274 660 L260 200 Z" fill="#000000" opacity="0.5"></path>
+    
+    <rect x="172" y="540" width="16" height="80" fill="#F26522" opacity="0.85">
+      
+    </rect>
+    <rect x="170" y="540" width="2" height="80" fill="#F26522" opacity="0.4"></rect>
+    
+    <line x1="100" y1="440" x2="260" y2="440" stroke="#000000" stroke-width="0.8" opacity="0.5"></line>
+    <line x1="100" y1="260" x2="260" y2="260" stroke="#000000" stroke-width="0.6" opacity="0.4"></line>
+  </g>
+
+  
+  <g class="t-part" data-part="display" style="transform: translate(0px, var(--ex-display, 0px));">
+    <path d="M104 196 L256 196 L246 100 L114 100 Z" fill="url(#t-body)"></path>
+    <path d="M104 196 L256 196 L246 100 L114 100 Z" fill="url(#t-highlight)" opacity="0.5"></path>
+    
+    <rect x="124" y="116" width="112" height="64" rx="4" fill="url(#t-screen)" stroke="#3a3835" stroke-width="0.6"></rect>
+    
+    <g opacity="0.85">
+      <text x="132" y="130" font-family="JetBrains Mono" font-size="6" fill="#6b6b67" letter-spacing="1.5">STATUS · READY</text>
+      <line x1="132" y1="138" x2="200" y2="138" stroke="#F26522" stroke-width="1"></line>
+      <text x="132" y="152" font-family="Space Grotesk" font-size="14" fill="#f5f5f3" font-weight="500">82.4 kW</text>
+      <text x="132" y="164" font-family="JetBrains Mono" font-size="5" fill="#6b6b67" letter-spacing="1">CCS2 · DC</text>
+      <rect x="170" y="158" width="58" height="3" rx="1.5" fill="#26241f"></rect>
+      <rect x="170" y="158" width="42" height="3" rx="1.5" fill="#F26522">
+        
+      </rect>
+    </g>
+    
+    <g opacity="0.4">
+      <line x1="124" y1="186" x2="236" y2="186" stroke="#3a3835" stroke-width="0.4"></line>
+    </g>
+  </g>
+
+  
+  <g class="t-part" data-part="cap" style="transform: translate(0px, var(--ex-cap, 0px));">
+    <path d="M114 100 L246 100 L236 70 L124 70 Z" fill="url(#t-side)"></path>
+    <path d="M124 70 L236 70 L226 56 L134 56 Z" fill="#26241f"></path>
+    <path d="M134 56 L226 56 L222 50 L138 50 Z" fill="#3a3835"></path>
+    
+    <rect x="138" y="86" width="84" height="2" rx="1" fill="#F26522" opacity="0.85">
+      
+    </rect>
+    
+    <circle cx="180" cy="78" r="2.4" fill="#0a0908" stroke="#3a3835" stroke-width="0.4"></circle>
+    <circle cx="180" cy="78" r="1" fill="#F26522" opacity="0.5"></circle>
+  </g>
+
+  
+  <g class="t-part" data-part="cable" style="transform: translate(0px, var(--ex-cable, 0px));">
+    
+    <path d="M250 460 L290 460 L292 530 L246 538 Z" fill="url(#t-body)"></path>
+    <path d="M250 460 L290 460 L292 530 L246 538 Z" fill="url(#t-highlight)" opacity="0.4"></path>
+    
+    <g transform="translate(248,470)">
+      <path d="M0 14 L52 14 L60 28 L52 42 L0 42 Z" fill="#2a2826"></path>
+      <path d="M0 14 L52 14 L60 28 L0 28 Z" fill="#3a3835" opacity="0.6"></path>
+      <rect x="6" y="16" width="40" height="6" fill="#F26522" opacity="0.7"></rect>
+      
+      <rect x="60" y="22" width="14" height="12" rx="2" fill="#0a0908"></rect>
+      <circle cx="68" cy="28" r="3.5" fill="url(#t-port)"></circle>
+    </g>
+    
+    <path d="M308 510 Q 320 560 312 620 Q 304 660 286 668" stroke="#1a1816" stroke-width="6" fill="none" stroke-linecap="round"></path>
+    <path d="M308 510 Q 320 560 312 620 Q 304 660 286 668" stroke="#3a3835" stroke-width="1.5" fill="none" opacity="0.5"></path>
+  </g>
+
+  
+  <g class="callout-layer" opacity="var(--callout-op, 0)" style="transition: opacity 0.6s var(--ease-cinema);">
+    
+    <line x1="246" y1="78" x2="320" y2="78" stroke="#F26522" stroke-width="0.6"></line>
+    <circle cx="246" cy="78" r="2" fill="none" stroke="#F26522" stroke-width="0.6"></circle>
+    <text x="324" y="76" font-family="JetBrains Mono" font-size="9" fill="#b8b8b4" letter-spacing="1.5">01 SENSOR · IR DETECT</text>
+    <text x="324" y="87" font-family="JetBrains Mono" font-size="7" fill="#6b6b67" letter-spacing="1.2">prox · ambient light</text>
+
+    
+    <line x1="246" y1="150" x2="320" y2="150" stroke="#F26522" stroke-width="0.6"></line>
+    <circle cx="246" cy="150" r="2" fill="none" stroke="#F26522" stroke-width="0.6"></circle>
+    <text x="324" y="148" font-family="JetBrains Mono" font-size="9" fill="#b8b8b4" letter-spacing="1.5">02 HDR DISPLAY · 8″</text>
+    <text x="324" y="159" font-family="JetBrains Mono" font-size="7" fill="#6b6b67" letter-spacing="1.2">anti-glare · IK10</text>
+
+    
+    <line x1="100" y1="440" x2="48" y2="440" stroke="#F26522" stroke-width="0.6"></line>
+    <circle cx="100" cy="440" r="2" fill="none" stroke="#F26522" stroke-width="0.6"></circle>
+    <text x="46" y="436" text-anchor="end" font-family="JetBrains Mono" font-size="9" fill="#b8b8b4" letter-spacing="1.5">03 POWER STACK</text>
+    <text x="46" y="447" text-anchor="end" font-family="JetBrains Mono" font-size="7" fill="#6b6b67" letter-spacing="1.2">SiC · 480 kW peak</text>
+
+    
+    <line x1="290" y1="490" x2="346" y2="490" stroke="#F26522" stroke-width="0.6"></line>
+    <circle cx="290" cy="490" r="2" fill="none" stroke="#F26522" stroke-width="0.6"></circle>
+    <text x="350" y="488" font-family="JetBrains Mono" font-size="9" fill="#b8b8b4" letter-spacing="1.5">04 LIQUID-COOLED GUN</text>
+    <text x="350" y="499" font-family="JetBrains Mono" font-size="7" fill="#6b6b67" letter-spacing="1.2">600A · CCS2 / NACS</text>
+
+    
+    <line x1="86" y1="680" x2="40" y2="680" stroke="#F26522" stroke-width="0.6"></line>
+    <circle cx="86" cy="680" r="2" fill="none" stroke="#F26522" stroke-width="0.6"></circle>
+    <text x="38" y="676" text-anchor="end" font-family="JetBrains Mono" font-size="9" fill="#b8b8b4" letter-spacing="1.5">05 ANCHOR PLATE</text>
+    <text x="38" y="687" text-anchor="end" font-family="JetBrains Mono" font-size="7" fill="#6b6b67" letter-spacing="1.2">forged steel · seismic</text>
+  </g>
+
+  
+  <ellipse cx="180" cy="60" rx="60" ry="6" fill="#ffffff" opacity="0.08" pointer-events="none"></ellipse>
+</svg>

@@ -1,0 +1,319 @@
+
+<svg class="eco-svg" viewBox="0 0 1280 720" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f1efea"></stop>
+      <stop offset="0.6" stop-color="#eae8e3"></stop>
+      <stop offset="1" stop-color="#e1ded7"></stop>
+    </linearGradient>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e1ddd5"></stop>
+      <stop offset="1" stop-color="#cdc8bd"></stop>
+    </linearGradient>
+    <linearGradient id="metal-top" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f5f4f1"></stop>
+      <stop offset="1" stop-color="#d8d5cd"></stop>
+    </linearGradient>
+    <linearGradient id="metal-side" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#bdbab1"></stop>
+      <stop offset="1" stop-color="#7e7b73"></stop>
+    </linearGradient>
+    <linearGradient id="dark-side" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2a2826"></stop>
+      <stop offset="1" stop-color="#0e0d0c"></stop>
+    </linearGradient>
+    <linearGradient id="dark-top" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#26241f"></stop>
+      <stop offset="1" stop-color="#0f0e0c"></stop>
+    </linearGradient>
+    <linearGradient id="solar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a1f2a"></stop>
+      <stop offset="0.5" stop-color="#0d1218"></stop>
+      <stop offset="1" stop-color="#1a1f2a"></stop>
+    </linearGradient>
+    <linearGradient id="solar-edge" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#525049"></stop>
+      <stop offset="1" stop-color="#2c2a26"></stop>
+    </linearGradient>
+    <linearGradient id="haze" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f4f3ef" stop-opacity="0"></stop>
+      <stop offset="1" stop-color="#f4f3ef" stop-opacity="0.55"></stop>
+    </linearGradient>
+    <radialGradient id="port-glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#F26522"></stop>
+      <stop offset="0.4" stop-color="#F26522" stop-opacity="0.8"></stop>
+      <stop offset="1" stop-color="#F26522" stop-opacity="0"></stop>
+    </radialGradient>
+
+    
+    <pattern id="grid" width="40" height="22" patternUnits="userSpaceOnUse" patternTransform="skewX(-30)">
+      <path d="M0 0 L40 0 M0 0 L0 22" stroke="#00000008" stroke-width="0.5"></path>
+    </pattern>
+
+    
+    <symbol id="taurus" viewBox="0 0 60 130" overflow="visible">
+      
+      <ellipse cx="30" cy="128" rx="22" ry="3.5" fill="#00000022"></ellipse>
+      
+      <path d="M8 122 L52 122 L48 115 L12 115 Z" fill="url(#dark-top)"></path>
+      
+      <rect x="14" y="22" width="32" height="98" rx="3" fill="url(#metal-top)" stroke="#9a978f" stroke-width="0.6"></rect>
+      
+      <path d="M14 22 L46 22 L42 14 L18 14 Z" fill="url(#metal-side)"></path>
+      
+      <rect x="19" y="36" width="22" height="32" rx="2" fill="#0a0a0a"></rect>
+      <rect x="19" y="36" width="22" height="32" rx="2" fill="url(#solar)" opacity="0.5"></rect>
+      <line x1="22" y1="44" x2="38" y2="44" stroke="#F26522" stroke-width="0.6" opacity="0.7"></line>
+      <line x1="22" y1="48" x2="34" y2="48" stroke="#ffffff" stroke-width="0.5" opacity="0.4"></line>
+      <line x1="22" y1="52" x2="36" y2="52" stroke="#ffffff" stroke-width="0.5" opacity="0.25"></line>
+      
+      <circle cx="30" cy="84" r="6" fill="#1a1a18"></circle>
+      <circle cx="30" cy="84" r="4.2" fill="#0a0a0a"></circle>
+      <circle cx="30" cy="84" r="2.4" fill="#F26522">
+        
+      </circle>
+      
+      <path d="M36 84 Q 48 92 50 110" stroke="#1a1a18" stroke-width="1.4" fill="none" stroke-linecap="round"></path>
+      
+      <line x1="14" y1="98" x2="46" y2="98" stroke="#9a978f" stroke-width="0.4"></line>
+    </symbol>
+
+    
+    <symbol id="taurus-hero" viewBox="0 0 60 130" overflow="visible">
+      <circle cx="30" cy="84" r="38" fill="url(#port-glow)" opacity="0.5"></circle>
+      <use href="#taurus"></use>
+      <circle cx="30" cy="84" r="6" fill="url(#port-glow)" opacity="0.9"></circle>
+    </symbol>
+
+    
+    <symbol id="ebox" viewBox="0 0 220 110" overflow="visible">
+      <ellipse cx="110" cy="108" rx="98" ry="4" fill="#00000022"></ellipse>
+      
+      <path d="M14 92 L14 26 L168 22 L168 88 Z" fill="#d8d5cd"></path>
+      
+      <path d="M14 26 L168 22 L206 18 L52 18 Z" fill="url(#metal-top)"></path>
+      
+      <path d="M52 18 L206 18 L206 96 L52 100 Z" fill="url(#metal-side)" opacity="0.92"></path>
+      
+      <g stroke="#8a8780" stroke-width="0.4" opacity="0.7">
+        <line x1="70" y1="22" x2="70" y2="98"></line>
+        <line x1="92" y1="22" x2="92" y2="98"></line>
+        <line x1="114" y1="22" x2="114" y2="98"></line>
+        <line x1="136" y1="22" x2="136" y2="98"></line>
+        <line x1="158" y1="22" x2="158" y2="98"></line>
+        <line x1="180" y1="22" x2="180" y2="98"></line>
+      </g>
+      
+      <rect x="64" y="40" width="16" height="42" fill="#0a0a0a" opacity="0.5" rx="1"></rect>
+      <rect x="86" y="40" width="16" height="42" fill="#0a0a0a" opacity="0.5" rx="1"></rect>
+      <rect x="108" y="40" width="16" height="42" fill="#0a0a0a" opacity="0.5" rx="1"></rect>
+      <rect x="130" y="40" width="16" height="42" fill="#0a0a0a" opacity="0.5" rx="1"></rect>
+      <rect x="152" y="40" width="16" height="42" fill="#0a0a0a" opacity="0.5" rx="1"></rect>
+      <rect x="174" y="40" width="16" height="42" fill="#0a0a0a" opacity="0.5" rx="1"></rect>
+      
+      <circle cx="60" cy="32" r="1.8" fill="#F26522"></circle>
+      <text x="65" y="35" font-family="JetBrains Mono" font-size="6" fill="#3a3835" letter-spacing="0.5">eBox 261</text>
+    </symbol>
+
+    
+    <symbol id="panel" viewBox="0 0 80 50">
+      <path d="M2 48 L78 48 L62 4 L18 4 Z" fill="url(#solar)" stroke="url(#solar-edge)" stroke-width="0.6"></path>
+      <g stroke="#404654" stroke-width="0.3" opacity="0.6">
+        <line x1="6" y1="36" x2="74" y2="36"></line>
+        <line x1="11" y1="24" x2="69" y2="24"></line>
+        <line x1="15" y1="12" x2="65" y2="12"></line>
+        <line x1="40" y1="4" x2="40" y2="48"></line>
+        <line x1="25" y1="4" x2="20" y2="48"></line>
+        <line x1="55" y1="4" x2="60" y2="48"></line>
+      </g>
+      
+      <rect x="38" y="48" width="4" height="6" fill="#4a4844"></rect>
+    </symbol>
+
+    
+    <symbol id="turbine" viewBox="0 0 80 200" overflow="visible">
+      <path d="M37 198 L43 198 L41 40 L39 40 Z" fill="url(#metal-side)"></path>
+      <circle cx="40" cy="38" r="3" fill="#2a2826"></circle>
+      <g style="transform-origin: 40px 38px; animation: spin 9s linear infinite;">
+        <path d="M40 38 L42 -4 L38 -2 Z" fill="#fafaf8" stroke="#7e7b73" stroke-width="0.4"></path>
+        <path d="M40 38 L78 58 L76 62 Z" fill="#fafaf8" stroke="#7e7b73" stroke-width="0.4"></path>
+        <path d="M40 38 L2 58 L4 62 Z" fill="#fafaf8" stroke="#7e7b73" stroke-width="0.4"></path>
+        <circle cx="40" cy="38" r="2.2" fill="#1a1a18"></circle>
+      </g>
+    </symbol>
+
+    
+    <symbol id="car" viewBox="0 0 60 24">
+      <ellipse cx="30" cy="22" rx="22" ry="2" fill="#00000033"></ellipse>
+      <path d="M6 18 L8 12 Q 10 6 18 6 L40 6 Q 48 6 52 12 L54 18 Z" fill="#1a1a18"></path>
+      <path d="M10 12 L48 12 L46 8 L14 8 Z" fill="#3a3835" opacity="0.6"></path>
+      <circle cx="16" cy="18" r="3" fill="#0a0a0a"></circle>
+      <circle cx="44" cy="18" r="3" fill="#0a0a0a"></circle>
+      <rect x="51" y="14" width="2" height="2" fill="#F26522" opacity="0.8"></rect>
+    </symbol>
+    <symbol id="car-light" viewBox="0 0 60 24">
+      <ellipse cx="30" cy="22" rx="22" ry="2" fill="#00000033"></ellipse>
+      <path d="M6 18 L8 12 Q 10 6 18 6 L40 6 Q 48 6 52 12 L54 18 Z" fill="#e8e6e2"></path>
+      <path d="M10 12 L48 12 L46 8 L14 8 Z" fill="#a8a6a2" opacity="0.7"></path>
+      <circle cx="16" cy="18" r="3" fill="#0a0a0a"></circle>
+      <circle cx="44" cy="18" r="3" fill="#0a0a0a"></circle>
+    </symbol>
+
+    
+    <symbol id="tree" viewBox="0 0 24 28">
+      <ellipse cx="12" cy="26" rx="9" ry="1.4" fill="#00000022"></ellipse>
+      <ellipse cx="12" cy="14" rx="9" ry="11" fill="#7a8275"></ellipse>
+      <ellipse cx="9" cy="11" rx="3" ry="3" fill="#8b9384" opacity="0.7"></ellipse>
+      <rect x="11" y="22" width="2" height="5" fill="#3a3530"></rect>
+    </symbol>
+
+    
+  </defs>
+
+  
+  <rect width="1280" height="720" fill="url(#sky)"></rect>
+
+  
+  <rect x="0" y="180" width="1280" height="80" fill="url(#haze)" opacity="0.6"></rect>
+
+  
+  <path d="M0 320 L1280 280 L1280 720 L0 720 Z" fill="url(#ground)"></path>
+  
+  <path d="M0 320 L1280 280 L1280 720 L0 720 Z" fill="url(#grid)" opacity="0.6"></path>
+
+  
+  <path d="M0 290 L160 240 L280 270 L420 230 L580 260 L740 235 L900 265 L1080 240 L1280 270 L1280 320 L0 320 Z" fill="#d8d4cb" opacity="0.7"></path>
+
+  
+  <g opacity="0.85">
+    <g transform="translate(870,160) scale(0.55)"><use href="#turbine"></use></g>
+    <g transform="translate(990,140) scale(0.7)"><use href="#turbine"></use></g>
+    <g transform="translate(1120,170) scale(0.5)"><use href="#turbine"></use></g>
+  </g>
+
+  
+  <g transform="translate(80,310)" opacity="0.95">
+    
+    <g transform="translate(0,0) scale(0.7)"><use href="#panel"></use></g>
+    <g transform="translate(60,0) scale(0.7)"><use href="#panel"></use></g>
+    <g transform="translate(120,0) scale(0.7)"><use href="#panel"></use></g>
+    <g transform="translate(180,0) scale(0.7)"><use href="#panel"></use></g>
+
+    <g transform="translate(10,40) scale(0.82)"><use href="#panel"></use></g>
+    <g transform="translate(80,40) scale(0.82)"><use href="#panel"></use></g>
+    <g transform="translate(150,40) scale(0.82)"><use href="#panel"></use></g>
+    <g transform="translate(220,40) scale(0.82)"><use href="#panel"></use></g>
+
+    <g transform="translate(20,90) scale(0.95)"><use href="#panel"></use></g>
+    <g transform="translate(100,90) scale(0.95)"><use href="#panel"></use></g>
+    <g transform="translate(180,90) scale(0.95)"><use href="#panel"></use></g>
+  </g>
+
+  
+  <g stroke="#88857f" stroke-width="0.6" fill="none" opacity="0.5">
+    <path d="M340 380 Q 480 360 600 380"></path>
+    <path d="M600 380 Q 740 360 880 380"></path>
+    <path d="M880 380 Q 1000 360 1180 380"></path>
+    
+    <g fill="#88857f">
+      <path d="M338 380 L342 380 L340 360 Z"></path>
+      <path d="M598 380 L602 380 L600 360 Z"></path>
+      <path d="M878 380 L882 380 L880 360 Z"></path>
+      <path d="M1178 380 L1182 380 L1180 360 Z"></path>
+    </g>
+  </g>
+
+  
+  <g transform="translate(60,500)" opacity="0.95">
+    <g transform="translate(0,0) scale(0.85)"><use href="#ebox"></use></g>
+    <g transform="translate(190,-6) scale(0.92)"><use href="#ebox"></use></g>
+  </g>
+
+  
+  <path d="M340 580 L940 540 L1140 600 L260 660 Z" fill="#2a2826" opacity="0.92"></path>
+  <path d="M340 580 L940 540 L1140 600 L260 660 Z" fill="#1a1a18"></path>
+  
+  <g stroke="#d8d5cd" stroke-width="1" stroke-dasharray="14 12" opacity="0.7">
+    <line x1="320" y1="618" x2="1090" y2="572"></line>
+  </g>
+
+  
+  <g style="animation: drive-l 26s linear infinite;">
+    <g transform="translate(280,608) scale(1.4)"><use href="#car"></use></g>
+  </g>
+  <g style="animation: drive-r 32s linear infinite;">
+    <g transform="translate(1080,580) scale(1.3)"><use href="#car-light"></use></g>
+  </g>
+  <g style="animation: drive-l 38s linear infinite; animation-delay: -10s;">
+    <g transform="translate(180,632) scale(1.1)"><use href="#car-light"></use></g>
+  </g>
+
+  
+  <path d="M488 460 L820 444 L860 510 L470 530 Z" fill="#e0ddd4" stroke="#a8a6a2" stroke-width="0.5"></path>
+  <path d="M488 460 L820 444 L860 510 L470 530 Z" fill="url(#grid)" opacity="0.4"></path>
+
+  
+  <g>
+    
+    <g transform="translate(620,330) scale(0.9)"><use href="#taurus-hero"></use></g>
+    
+    <g transform="translate(540,346) scale(0.78)"><use href="#taurus"></use></g>
+    <g transform="translate(720,332) scale(0.84)"><use href="#taurus"></use></g>
+    <g transform="translate(460,360) scale(0.7)"><use href="#taurus"></use></g>
+    <g transform="translate(796,344) scale(0.78)"><use href="#taurus"></use></g>
+  </g>
+
+  
+  <g transform="translate(610,470) scale(1.6)"><use href="#car-light"></use></g>
+  <g transform="translate(720,478) scale(1.4)"><use href="#car"></use></g>
+
+  
+  <g transform="translate(880,420)">
+    
+    <path d="M0 60 L260 50 L280 56 L20 70 Z" fill="url(#metal-top)" stroke="#9a978f" stroke-width="0.4"></path>
+    <path d="M0 60 L0 100 L20 116 L20 70 Z" fill="url(#metal-side)"></path>
+    <path d="M260 50 L280 56 L280 100 L260 110 Z" fill="url(#metal-side)" opacity="0.85"></path>
+    
+    <path d="M40 80 L240 70 L240 130 L40 144 Z" fill="#3a3835"></path>
+    <path d="M40 80 L240 70 L260 76 L60 88 Z" fill="#2a2826"></path>
+    
+    <rect x="80" y="92" width="120" height="46" fill="#F2652222"></rect>
+    <line x1="80" y1="92" x2="200" y2="86" stroke="#F26522" stroke-width="0.5" opacity="0.7"></line>
+    
+    <text x="100" y="62" font-family="JetBrains Mono" font-size="6" fill="#3a3835" letter-spacing="0.5">SWAP STATION</text>
+  </g>
+
+  
+  <g transform="translate(420,580)">
+    <rect x="0" y="0" width="34" height="44" rx="2" fill="url(#dark-top)"></rect>
+    <rect x="3" y="6" width="28" height="16" fill="#F2652244"></rect>
+    <line x1="6" y1="10" x2="20" y2="10" stroke="#F26522" stroke-width="0.5"></line>
+    <line x1="6" y1="14" x2="24" y2="14" stroke="#ffffff" stroke-width="0.4" opacity="0.4"></line>
+  </g>
+
+  
+  <g>
+    <g transform="translate(40,450) scale(0.9)"><use href="#tree"></use></g>
+    <g transform="translate(380,440) scale(0.8)"><use href="#tree"></use></g>
+    <g transform="translate(848,400) scale(0.7)"><use href="#tree"></use></g>
+    <g transform="translate(1180,470) scale(0.85)"><use href="#tree"></use></g>
+    <g transform="translate(20,560) scale(1)"><use href="#tree"></use></g>
+    <g transform="translate(1200,580) scale(1.1)"><use href="#tree"></use></g>
+    <g transform="translate(900,310) scale(0.55)"><use href="#tree"></use></g>
+    <g transform="translate(360,540) scale(0.7)"><use href="#tree"></use></g>
+  </g>
+
+  
+  <rect width="1280" height="720" fill="url(#haze)" opacity="0.25"></rect>
+
+  
+  <g opacity="0.75" pointer-events="none">
+    <circle cx="640" cy="403" r="36" fill="none" stroke="#F26522" stroke-width="0.8" stroke-dasharray="2 3" opacity="0.6">
+      
+    </circle>
+    <line x1="640" y1="380" x2="640" y2="360" stroke="#F26522" stroke-width="0.6"></line>
+    <line x1="640" y1="370" x2="700" y2="320" stroke="#F26522" stroke-width="0.5"></line>
+    <text x="704" y="318" font-family="JetBrains Mono" font-size="9" fill="#F26522" letter-spacing="1">TAURUS · 4G · PORT 01</text>
+  </g>
+</svg>
