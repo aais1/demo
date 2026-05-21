@@ -114,13 +114,13 @@
   position: absolute;
   z-index: 5;
   left: 0; right: 0;
-  bottom: 12vh;
+  top: 0;
+  bottom: 0;
   display: grid;
   grid-template-columns: 1.1fr 1fr;
   gap: 48px;
   padding: 0 0vw;
   width: 80vw;
-  
   margin: auto;
   align-items: end;
   justify-items: space-between;
@@ -136,6 +136,8 @@
   color: var(--ink);
   text-wrap: balance;
   text-shadow: 0 2px 24px rgba(255,255,255,0.4);
+  align-self: start;
+  padding-top: 13vh;
 }
 .hero-title em {
   font-style: normal;
@@ -168,11 +170,12 @@
 .hero-right {
   display: flex;
   flex-direction: column;
-  align-self: flex-end;
-  align-items: self-end;
+  align-self: end;
+  align-items: flex-end;
   gap: 22px;
   pointer-events: auto;
   opacity: 0;
+  padding-bottom: 12vh;
   transform: translateY(-12px);
   animation: rightIn 1.4s var(--ease-cinema) 1.43s forwards;
 }
